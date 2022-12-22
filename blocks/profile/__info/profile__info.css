@@ -1,0 +1,12 @@
+.profile__info {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-areas:
+    "name button"
+    "intro intro";
+    row-gap: 8px;
+    column-gap: 18px;
+    margin-left: 30px;
+    margin-bottom: auto;
+    padding-top: 22px;
+}
