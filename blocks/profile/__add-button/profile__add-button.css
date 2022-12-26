@@ -1,6 +1,21 @@
 .profile__add-button {
+    align-self: center;
     background: url('./profile__add-button.svg');
-    width: 150px;
+    min-width: 150px;
     height: 50px;
     border: none;
+    margin-left: 30px;
+}
+
+.profile__add-button:hover {
+    opacity: 0.6;
+}
+
+@media screen and (max-width: 768px) {
+    .profile__add-button {
+        background: url('./profile__add-button_mobile.svg');
+        min-width: 282px;
+        margin-left: 0;
+        margin-top: 32px;
+    }
 }
