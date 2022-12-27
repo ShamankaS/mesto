@@ -1,17 +1,27 @@
-# Проект: Место
+# Project: Mesto
 
-### Обзор
 
-* Figma
-* Картинки
+### Intro
+
+Mesto is a web-page with gallery of personal travel photos.
+It consists of photos and a personal user profile.
+
+[Link on GitHub Pages](https://shamankas.github.io/mesto)
 
 **Figma**
 
-* [Ссылка на макет в Figma](https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?node-id=0%3A1)
+* [Link on Figma](https://www.figma.com/file/FiBfMYuLOMMg3zF2toP7sx/JavaScript.-Sprint-4?node-id=28212%3A2&t=jHdKPGSN5jKAS0Vf-1)
 
-**Картинки**
+### Used technologies
 
-Доставать картинки предстоит из Фигмы. Это расхожая практика, поэтому полезно потренироваться.
-Не забудьте [оптимизировать картинки](https://tinypng.com/), чтобы ваш сайт загружался быстрее.
+* grid containers;
+* interactive links on mouse hover;
+* JavaScript logic to open/close popup and submit form on web-page.
 
-Удачи!
+### Project
+
+Frontend (HTML, CSS, JavaScript)
+
+### TODO
+1. Updating web-site content.
+2. Add tracker of likes on photos.
