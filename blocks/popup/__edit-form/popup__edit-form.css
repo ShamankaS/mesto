@@ -1,4 +1,4 @@
-.popup__editform {
+.popup__edit-form {
     display: flex;
     box-sizing: border-box;
     margin: 0 0 30px;
@@ -12,10 +12,10 @@
     color: #000000;
 }
 
-.popup__editform:last-of-type {
+.popup__edit-form:last-of-type {
     margin: 0;
 }
 
-.popup__editform:focus {
+.popup__edit-form:focus {
     outline: solid rgba(0, 0, 0, 0.2) 1px;
 }
