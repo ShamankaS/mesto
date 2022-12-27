@@ -1,6 +1,7 @@
 .profile__add-button {
     align-self: center;
     background: url('./profile__add-button.svg');
+    background-repeat: no-repeat;
     min-width: 150px;
     height: 50px;
     border: none;
@@ -9,11 +10,17 @@
 
 .profile__add-button:hover {
     opacity: 0.6;
+    transition: opacity 0.1s linear;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
     .profile__add-button {
-        background: url('./profile__add-button_mobile.svg');
+        /* добавила background-size по рекомендации ревьюера,
+        но у кнопки при мобильном разрешении и обычном разные пропорции сторон,
+        поэтому при использовании одного изображения и растягивании его на разные размеры,
+        теряется качество изображения (а именно знака "Плюс") */
+        background-size: 282px 50px;
         min-width: 282px;
         margin-left: 0;
         margin-top: 32px;
