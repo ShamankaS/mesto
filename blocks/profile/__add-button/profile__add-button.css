@@ -1,10 +1,14 @@
 .profile__add-button {
     align-self: center;
     background: url('./profile__add-button.svg');
+    background-position: center;
+    background-size: 22px;
+    aspect-ratio: 1/1;
     background-repeat: no-repeat;
     min-width: 150px;
     height: 50px;
-    border: none;
+    border: 2px solid #FFFFFF;
+    border-radius: 2px;
     margin-left: 30px;
 }
 
@@ -16,11 +20,7 @@
 
 @media screen and (max-width: 768px) {
     .profile__add-button {
-        /* добавила background-size по рекомендации ревьюера,
-        но у кнопки при мобильном разрешении и обычном разные пропорции сторон,
-        поэтому при использовании одного изображения и растягивании его на разные размеры,
-        теряется качество изображения (а именно знака "Плюс") */
-        background-size: 282px 50px;
+        background-size: 16px;
         min-width: 282px;
         margin-left: 0;
         margin-top: 32px;
