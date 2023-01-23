@@ -1,5 +1,8 @@
 .element__image {
+    max-width: 100%;
+    width: 100%;
     border-radius: 10px 10px 0 0;
     border: none;
     aspect-ratio: 1 / 1;
+    object-fit: cover;
 }

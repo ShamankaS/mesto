@@ -6,12 +6,7 @@
 }
 
 .element__like:hover {
-    opacity: 0.5;
+    opacity: 0.6;
     transition: opacity 0.1s linear;
     cursor: pointer;
-}
-
-.element__like:active {
-    opacity: 1;
-    background: url('./element__like_active.svg');
 }
