@@ -1,13 +1,13 @@
 const popupProfile = document.querySelector('#popup_type_profile');
 const popupCard = document.querySelector('#popup_type_card');
 
-const nameInput = document.querySelector('.input_type_name');
-const introInput = document.querySelector('.input_type_intro');
+const nameInput = document.querySelector('#input_type_name');
+const introInput = document.querySelector('#input_type_intro');
 const profileName = document.querySelector('.profile__name');
 const profileIntro = document.querySelector('.profile__intro');
 
-const titleInput = document.querySelector('.input_type_title');
-const linkInput = document.querySelector('.input_type_link');
+const titleInput = document.querySelector('#input_type_title');
+const linkInput = document.querySelector('#input_type_link');
 
 const elementsSection = document.querySelector('.elements');
 
@@ -97,14 +97,14 @@ closeIcons.forEach(item => {
     item.addEventListener('click', closePopup);
 })
 
-const submitProfile = document.querySelector('.form_type_profile').addEventListener('submit', evt => {
+const submitProfile = document.querySelector('#form_type_profile').addEventListener('submit', evt => {
     evt.preventDefault();
     profileName.textContent = `${nameInput.value}`;
     profileIntro.textContent = `${introInput.value}`;
     closePopup(evt);
 });
 
-const submitCard = document.querySelector('.form_type_card').addEventListener('submit', evt => {
+const submitCard = document.querySelector('#form_type_card').addEventListener('submit', evt => {
     evt.preventDefault();
     const newCard = cardCreate(titleInput.value, linkInput.value);
     elementsSection.prepend(newCard);
