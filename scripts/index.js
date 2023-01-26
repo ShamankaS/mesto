@@ -12,8 +12,12 @@ const cardTemplate = document.querySelector('#template');
 const popupImage = document.querySelector('.popup__image');
 const popupCaption = document.querySelector('.popup__caption');
 
-const openClosePopup = item => {
-    item.classList.toggle('popup_active');
+const openPopup = item => {
+    item.classList.add('popup_active');
+};
+
+const closePopup = item => {
+    item.classList.remove('popup_active');
 };
 
 const deleteCard = evt => {
@@ -28,7 +32,7 @@ const openPicture = (cardTitle, cardLink) => {
     popupImage.src = cardLink;
     popupImage.alt = cardTitle;
     popupCaption.textContent = `${cardTitle}`
-    openClosePopup(popupPicture);
+    openPopup(popupPicture);
 }
 
 const createCard = cardData => {
@@ -48,36 +52,35 @@ initialCards.forEach(item => {
 });
 
 document.querySelector('.profile__edit-button').addEventListener('click', () => {
-    openClosePopup(popupProfile);
+    openPopup(popupProfile);
     nameInput.value = `${profileName.textContent}`;
     introInput.value = `${profileIntro.textContent}`;
 });
 
 document.querySelector('.profile__add-button').addEventListener('click', () => {
-    openClosePopup(popupCard);
+    openPopup(popupCard);
     titleInput.value = '';
     linkInput.value = '';
 });
 
 document.querySelectorAll('.popup__close-button').forEach(item => {
-    item.addEventListener('click', evt => {
-        openClosePopup(evt.target.closest('.popup'));
-    });
+    const popup = item.closest('.popup');
+    item.addEventListener('click', () => closePopup(popup));
 });
 
 document.querySelector('#form_type_profile').addEventListener('submit', evt => {
     evt.preventDefault();
     profileName.textContent = `${nameInput.value}`;
     profileIntro.textContent = `${introInput.value}`;
-    openClosePopup(popupProfile);
+    closePopup(popupProfile);
 });
 
 document.querySelector('#form_type_card').addEventListener('submit', evt => {
     evt.preventDefault();
-    let infoInput = {
+    const infoInput = {
         name: titleInput.value,
         link: linkInput.value
     };
     elementsSection.prepend(createCard(infoInput));
-    openClosePopup(popupCard);
+    closePopup(popupCard);
 });
