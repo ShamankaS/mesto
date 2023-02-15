@@ -1,5 +1,5 @@
-const popupProfile = document.querySelector('#popup_type_profile');
-const popupCard = document.querySelector('#popup_type_card');
+const popupProfile = document.querySelector('.popup_type_profile');
+const popupCard = document.querySelector('.popup_type_card');
 const popupPicture = document.querySelector('.popup_type_picture');
 const nameInput = document.querySelector('#input_type_name');
 const introInput = document.querySelector('#input_type_intro');
@@ -12,11 +12,35 @@ const cardTemplate = document.querySelector('#template');
 const popupImage = document.querySelector('.popup__image');
 const popupCaption = document.querySelector('.popup__caption');
 
+const escHandler = (evt) => {
+    if (evt.key === 'Escape') {
+        closePopup(document.querySelector('.popup_active'));
+    }
+}
+
+const clickCloseOverlay = evt => {
+    if (evt.target === evt.currentTarget) {
+        closePopup(evt.target);
+    }
+}
+
+const escClose = item => {
+    document.addEventListener('keydown', escHandler);
+    item.addEventListener('mousedown', clickCloseOverlay);
+}
+
+const removeEscClose = item => {
+    document.removeEventListener('keydown', escHandler);
+    item.removeEventListener('mousedown', clickCloseOverlay);
+}
+
 const openPopup = item => {
     item.classList.add('popup_active');
+    escClose(item);
 };
 
 const closePopup = item => {
+    removeEscClose(item);
     item.classList.remove('popup_active');
 };
 
