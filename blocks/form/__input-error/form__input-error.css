@@ -1,0 +1,4 @@
+.form__input-error {
+    position: absolute;
+    top: calc(100% + 5px);
+}
