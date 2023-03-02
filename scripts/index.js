@@ -95,6 +95,7 @@ document.forms['profile-info'].addEventListener('submit', evt => {
     evt.preventDefault();
     profileName.textContent = `${nameInput.value}`;
     profileIntro.textContent = `${introInput.value}`;
+    evt.target.reset();
     closePopup(popupProfile);
 });
 
@@ -106,7 +107,5 @@ document.forms['card'].addEventListener('submit', evt => {
     };
     elementsSection.prepend(createCard(infoInput));
     evt.target.reset();
-    // titleInput.value = '';
-    // linkInput.value = '';
     closePopup(popupCard);
 });
