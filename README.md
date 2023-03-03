@@ -18,6 +18,16 @@ It consists of cards with photos and a personal user profile.
 
 Frontend (HTML, CSS, JavaScript)
 
+#### TODO
+1. Add backend.
+2. Add the number of likes of photo.
+
+
+## v4.0.0
+### What's new:
+
+* code refactoring within OOP.
+
 
 ## v3.0.0
 **Figma**
@@ -29,10 +39,6 @@ Frontend (HTML, CSS, JavaScript)
 * added validation of the "Edit Profile" form;
 * added validation of the "New place" form;
 * added the ability to close an already open popup/form using Esc-key or clicking on the overlay.
-
-#### TODO
-1. Add backend.
-2. Add the number of likes of photo.
 
 
 ## v2.0.0
@@ -49,10 +55,6 @@ Frontend (HTML, CSS, JavaScript)
 * opening a pop-up with a picture and an inscription;
 * smooth opening and closing of popups and forms.
 
-#### TODO
-1. Add backend.
-2. Add the number of likes of photo.
-
 
 ## v1.0.0
 **Figma**
@@ -64,7 +66,3 @@ Frontend (HTML, CSS, JavaScript)
 * grid containers;
 * interactive links on mouse hover;
 * JavaScript logic to open/close popup and submit form on web-page.
-
-#### TODO
-1. Updating web-site content.
-2. Add tracker of likes on photos.
