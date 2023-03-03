@@ -8,9 +8,13 @@ const linkInput = document.querySelector('#input_type_link');
 const profileName = document.querySelector('.profile__name');
 const profileIntro = document.querySelector('.profile__intro');
 const elementsSection = document.querySelector('.elements');
-const cardTemplate = document.querySelector('#template');
 const popupImage = document.querySelector('.popup__image');
 const popupCaption = document.querySelector('.popup__caption');
+const editButton = document.querySelector('.profile__edit-button');
+const addButton = document.querySelector('.profile__add-button');
+const closeButtons = document.querySelectorAll('.popup__close-button');
+const profileForm = document.forms['profile-info'];
+const cardForm = document.forms['card'];
 const validationConfig = {
     formSelector: '.popup__form',
     inputSelector: '.form__input',
@@ -31,8 +35,12 @@ export {
     profileName,
     profileIntro,
     elementsSection,
-    cardTemplate,
     popupImage,
     popupCaption,
+    editButton,
+    addButton,
+    closeButtons,
+    profileForm,
+    cardForm,
     validationConfig
 };

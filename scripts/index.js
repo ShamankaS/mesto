@@ -1,13 +1,11 @@
 import {
-    popupProfile,
-    popupCard,
-    nameInput,
-    introInput,
-    titleInput,
-    linkInput,
-    profileName,
-    profileIntro,
+    popupProfile, popupCard,
+    nameInput, introInput,
+    titleInput, linkInput,
+    profileName, profileIntro,
     elementsSection,
+    editButton, addButton, closeButtons,
+    profileForm, cardForm,
     validationConfig
 } from './constants.js';
 import {
@@ -18,27 +16,32 @@ import dataCards from './cards.js';
 import Card from './Card.js';
 import FormValidator from './FormValidator.js';
 
+//создаётся рендер страницы по первичным данным из другого файла (стартовые 6 карточек)
 dataCards.forEach(item => {
     const card = new Card(item, '#template');
     elementsSection.append(card.createCard());
 });
 
-document.querySelector('.profile__edit-button').addEventListener('click', () => {
+editButton.addEventListener('click', () => {
     openPopup(popupProfile);
+    profileFormValidation.hideAllErrors();
     nameInput.value = `${profileName.textContent}`;
     introInput.value = `${profileIntro.textContent}`;
 });
 
-document.querySelector('.profile__add-button').addEventListener('click', () => {
+addButton.addEventListener('click', () => {
     openPopup(popupCard);
+    cardFormValidation.hideAllErrors();
+    titleInput.value = '';
+    linkInput.value = '';
 });
 
-document.querySelectorAll('.popup__close-button').forEach(item => {
+closeButtons.forEach(item => {
     const popup = item.closest('.popup');
     item.addEventListener('click', () => closePopup(popup));
 });
 
-document.forms['profile-info'].addEventListener('submit', evt => {
+profileForm.addEventListener('submit', evt => {
     evt.preventDefault();
     profileName.textContent = `${nameInput.value}`;
     profileIntro.textContent = `${introInput.value}`;
@@ -46,19 +49,21 @@ document.forms['profile-info'].addEventListener('submit', evt => {
     closePopup(popupProfile);
 });
 
-document.forms['card'].addEventListener('submit', evt => {
+cardForm.addEventListener('submit', evt => {
     evt.preventDefault();
     const infoInput = {
         name: titleInput.value,
         link: linkInput.value
     };
+    //создаются новые карточки по информации пользователя из формы
     const card = new Card(infoInput, '#template');
+    //добавление созданных карточек в начало сетки карточек
     elementsSection.prepend(card.createCard());
     evt.target.reset();
     closePopup(popupCard);
 });
 
-Array.from(document.querySelectorAll(validationConfig.formSelector)).forEach(item => {
-    const form = new FormValidator(validationConfig, item);
-    form.enableValidation();
-});
+const profileFormValidation = new FormValidator(validationConfig, profileForm);
+profileFormValidation.enableValidation();
+const cardFormValidation = new FormValidator(validationConfig, cardForm);
+cardFormValidation.enableValidation();
