@@ -10,16 +10,14 @@ import {
 } from './constants.js';
 import {
     openPopup,
-    closePopup
+    closePopup,
+    renderCard
 } from './utils.js';
 import dataCards from './cards.js';
-import Card from './Card.js';
 import FormValidator from './FormValidator.js';
 
-//создаётся рендер страницы по первичным данным из другого файла (стартовые 6 карточек)
 dataCards.forEach(item => {
-    const card = new Card(item, '#template');
-    elementsSection.append(card.createCard());
+    elementsSection.append(renderCard(item, '#template'));
 });
 
 editButton.addEventListener('click', () => {
@@ -55,10 +53,7 @@ cardForm.addEventListener('submit', evt => {
         name: titleInput.value,
         link: linkInput.value
     };
-    //создаются новые карточки по информации пользователя из формы
-    const card = new Card(infoInput, '#template');
-    //добавление созданных карточек в начало сетки карточек
-    elementsSection.prepend(card.createCard());
+    elementsSection.prepend(renderCard(infoInput, '#template'));
     evt.target.reset();
     closePopup(popupCard);
 });
