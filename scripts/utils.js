@@ -1,3 +1,5 @@
+import Card from './Card.js';
+
 const handleEscape = evt => {
     if (evt.key === 'Escape') {
         closePopup(document.querySelector('.popup_active'));
@@ -30,7 +32,13 @@ const closePopup = item => {
     item.classList.remove('popup_active');
 };
 
+const renderCard = (data, template) => {
+    const card = new Card(data, template);
+    return card.createCard();
+};
+
 export {
     openPopup,
-    closePopup
+    closePopup,
+    renderCard
 };
