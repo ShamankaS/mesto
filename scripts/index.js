@@ -30,8 +30,7 @@ editButton.addEventListener('click', () => {
 addButton.addEventListener('click', () => {
     openPopup(popupCard);
     cardFormValidation.hideAllErrors();
-    titleInput.value = '';
-    linkInput.value = '';
+    cardForm.reset();
 });
 
 closeButtons.forEach(item => {
