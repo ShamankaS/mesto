@@ -1,3 +1,4 @@
+import './index.css';
 import {
     popupProfile, popupCard,
     nameInput, introInput,
@@ -7,14 +8,14 @@ import {
     editButton, addButton, closeButtons,
     profileForm, cardForm,
     validationConfig
-} from './constants.js';
+} from '../scripts/constants.js';
 import {
     openPopup,
     closePopup,
     renderCard
-} from './utils.js';
-import dataCards from './cards.js';
-import FormValidator from './FormValidator.js';
+} from '../scripts/utils.js';
+import dataCards from '../scripts/cards.js';
+import FormValidator from '../scripts/FormValidator.js';
 
 dataCards.forEach(item => {
     elementsSection.append(renderCard(item, '#template'));
