@@ -22,6 +22,12 @@ Frontend (HTML, CSS, JavaScript)
 1. Add backend.
 2. Add the number of likes of photo.
 
+## v5.0.0
+### What's new:
+
+* refactoring (added new functional classes and configured interaction between them);
+* Webpack initialization.
+
 
 ## v4.0.0
 ### What's new:
