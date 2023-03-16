@@ -1,17 +1,9 @@
-import {
-    openPopup
-} from './utils.js';
-import {
-    popupImage,
-    popupCaption,
-    popupPicture
-} from './constants.js';
-
 export default class Card {
-    constructor(data, template) {
+    constructor(data, template, handleCardClick) {
         this._name = data.name;
         this._link = data.link;
         this._template = template;
+        this._handleCardClick = handleCardClick;
     };
 
     _getTemplate = () => {
@@ -27,13 +19,6 @@ export default class Card {
         evt.target.classList.toggle('element__like_active');
     };
 
-    _openPicture = () => {
-        popupImage.src = this._link;
-        popupImage.alt = this._name;
-        popupCaption.textContent = `${this._name}`;
-        openPopup(popupPicture);
-    };
-
     _setEventListeners = () => {
         this._element.querySelector('.element__like').addEventListener('click', (evt) => {
             this._toggleLike(evt);
@@ -41,18 +26,18 @@ export default class Card {
         this._element.querySelector('.element__trash').addEventListener('click', (evt) => {
             this._deleteCard(evt);
         });
-        this._element.querySelector('.element__image').addEventListener('click', () => {
-            this._openPicture();
+        this._image.addEventListener('click', () => {
+            this._handleCardClick(this._name, this._link);
         });
     };
 
     createCard = () => {
         this._element = this._getTemplate();
-        this._setEventListeners();
         this._image = this._element.querySelector('.element__image');
-        this._element.querySelector('.element__title').textContent = this._name;
         this._image.src = this._link;
         this._image.alt = this._name;
+        this._element.querySelector('.element__title').textContent = this._name;
+        this._setEventListeners();
         return this._element;
     };
 }
