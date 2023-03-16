@@ -62,9 +62,9 @@ cardFormValidation.enableValidation();
 
 editButton.addEventListener('click', () => {
     popupEditProfile.open();
+    profileFormValidation.hideAllErrors();
     const info = infoProfile.getUserInfo();
     popupEditProfile.setInputValue(info);
-    profileFormValidation.hideAllErrors();
 });
 
 const popupEditProfile = new PopupWithForm(popupProfile, submitEditForm);
