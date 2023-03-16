@@ -1,6 +1,6 @@
 {
   "name": "mesto",
-  "version": "1.0.0",
+  "version": "5.0.0",
   "description": "Mesto is a website with gallery of personal travel photos.\r It consists of cards with photos and a personal user profile.",
   "main": "index.js",
   "scripts": {
@@ -25,6 +25,7 @@
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.7.3",
     "cssnano": "^5.1.15",
+    "gh-pages": "^5.0.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.7.3",
     "postcss-loader": "^7.0.2",
@@ -33,7 +34,7 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
-    "core-js": "^3.29.0",
+    "core-js": "^3.29.1",
     "lodash": "^4.17.21"
   }
 }
