@@ -6,8 +6,10 @@
 @import url('../blocks/header/__logo/header__logo.css');
 @import url('../blocks/profile/profile.css');
 @import url('../blocks/profile/__container/profile__container.css');
+@import url('../blocks/profile/__avatar-block/profile__avatar-block.css');
 @import url('../blocks/profile/__edit-button/profile__edit-button.css');
 @import url('../blocks/profile/__add-button/profile__add-button.css');
+@import url('../blocks/profile/__avatar-overlay/profile__avatar-overlay.css');
 @import url('../blocks/profile/__avatar/profile__avatar.css');
 @import url('../blocks/profile/__info/profile__info.css');
 @import url('../blocks/profile/__intro/profile__intro.css');
@@ -41,3 +43,10 @@
 @import url('../blocks/form/__input/_type/form__input_type_error.css');
 @import url('../blocks/form/__submit/form__submit.css');
 @import url('../blocks/form/__submit/_disabled/form__submit_disabled.css');
+
+@import url('../blocks/element/__like-counter/element__like-counter.css');
+@import url('../blocks/element/__like-container/element__like-container.css');
+@import url('../blocks/popup/__containter/_type/popup__container_type_card-delete.css');
+@import url('../blocks/popup/__title/_type/popup__title_type_card-delete.css');
+@import url('../blocks/form/__submit/_type/form__submit_type_card-delete.css');
+@import url('../blocks/profile/__avatar-overlay/profile__avatar-overlay.css');
