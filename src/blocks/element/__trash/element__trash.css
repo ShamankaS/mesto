@@ -1,7 +1,7 @@
 .element__trash {
     position: absolute;
     top: 20px;
-    right: 20px;
+    right: 18px;
     background: url('./element__trash.svg');
     border: none;
     width: 18px;
