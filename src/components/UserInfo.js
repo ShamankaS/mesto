@@ -14,13 +14,13 @@ export default class UserInfo {
         return userInfo;
     }
 
-    setUserInfo = (data) => {
-        if (data.fullname) {
-            this._name.textContent = data.fullname;
-            this._avatar.alt = data.fullname;
+    setUserInfo(data) {
+        if (data.name) {
+            this._name.textContent = data.name;
+            this._avatar.alt = data.name;
         };
-        if (data.job) {
-            this._job.textContent = data.job;
+        if (data.about) {
+            this._job.textContent = data.about;
         };
         if (data.avatar) {
             this._avatar.src = data.avatar;

@@ -1,14 +1,15 @@
 const popupProfile = document.querySelector('.popup_type_profile');
 const popupCard = document.querySelector('.popup_type_card');
 const popupPicture = document.querySelector('.popup_type_picture');
-
 const elementsSection = document.querySelector('.elements');
-
 const editButton = document.querySelector('.profile__edit-button');
 const addButton = document.querySelector('.profile__add-button');
-
 const profileForm = document.forms['profile-info'];
 const cardForm = document.forms['card'];
+const popupAvatar = document.querySelector('.popup_type_profile-update');
+const avatarForm = document.forms['profile-update'];
+const profileAvatar = document.querySelector('.profile__avatar-overlay');
+const popupDeleteCard = document.querySelector('.popup_type_card-delete');
 
 const validationConfig = {
     formSelector: '.popup__form',
@@ -28,5 +29,9 @@ export {
     addButton,
     profileForm,
     cardForm,
-    validationConfig
+    validationConfig,
+    popupAvatar,
+    profileAvatar,
+    avatarForm,
+    popupDeleteCard
 };

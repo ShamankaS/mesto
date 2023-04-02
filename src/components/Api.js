@@ -47,7 +47,7 @@ export default class Api {
     }
 
     async deleteCard(id) {
-        const res = await fetch(`${this._url}/cards/${id}}`, {
+        const res = await fetch(`${this._url}/cards/${id}`, {
             method: 'DELETE',
             headers: this._headers
         });
@@ -55,7 +55,7 @@ export default class Api {
     }
 
     async putLike(id) {
-        const res = await fetch(`${this._url}/cards/${id}/likes}`, {
+        const res = await fetch(`${this._url}/cards/${id}/likes`, {
             method: 'PUT',
             headers: this._headers
         });
@@ -63,7 +63,7 @@ export default class Api {
     }
 
      async deleteLike(id) {
-        const res = await fetch(`${this._url}/cards/${id}/likes}`, {
+        const res = await fetch(`${this._url}/cards/${id}/likes`, {
              method: 'DELETE',
              headers: this._headers
          });
@@ -71,7 +71,7 @@ export default class Api {
     }
 
     async changeAvatar(data) {
-        const res = await fetch(`${this._url}/users/me/avatar}`, {
+        const res = await fetch(`${this._url}/users/me/avatar`, {
             method: 'PATCH',
             headers: this._headers,
             body: JSON.stringify({

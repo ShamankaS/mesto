@@ -16,14 +16,13 @@
             <section class="profile">
                 <div class="profile__container">
                     <div class="profile__avatar-block">
-                        <img class="profile__avatar" src="<%=require('./blocks/profile/profile__avatar.jpg')%>"
-                            alt="Аватар">
+                        <img class="profile__avatar" src="" alt="Аватар">
                         <div class="profile__avatar-overlay"></div>
                     </div>
                     <div class="profile__info">
-                        <h1 class="profile__name">Жак-Ив Кусто</h1>
+                        <h1 class="profile__name"></h1>
                         <button class="profile__edit-button" type="button"></button>
-                        <p class="profile__intro">Исследователь океана</p>
+                        <p class="profile__intro"></p>
                     </div>
                 </div>
                 <button class="profile__add-button" type="button"></button>
@@ -86,8 +85,8 @@
         <div class="popup__container popup__container_type_card-delete">
             <button class="popup__close-button" type="button"></button>
             <h2 class="popup__title popup__title_type_card-delete">Вы уверены?</h2>
-            <form class="popup__form form" name="card-delete" novalidate>
-                <button type="submit" class="form__submit form__submit_type_card-delete" disabled>Да</button>
+            <form class="popup__form form" name="card-delete">
+                <button type="submit" class="form__submit form__submit_type_card-delete">Да</button>
             </form>
         </div>
     </div>
@@ -97,8 +96,9 @@
             <h2 class="popup__title">Обновить аватар</h2>
             <form class="popup__form form" name="profile-update" novalidate>
                 <label class="form__field">
-                    <input class="form__input" id="input_type_img-update" placeholder="Ссылка на изображение"
-                    name="img-link" required type="url">
+                    <input class="form__input" id="input_type_img-link" placeholder="Ссылка на изображение"
+                        name="avatar" required type="url">
+                    <span class="form__input-error" id="error-input_type_img-link"></span>
                 </label>
                 <button type="submit" class="form__submit" disabled>Сохранить</button>
             </form>
