@@ -11,7 +11,7 @@ import Section from '../components/Section.js';
 import Card from '../components/Card.js';
 import PopupWithImage from '../components/PopupWithImage.js';
 import PopupWithForm from '../components/PopupWithForm.js';
-import PopupConfir from '../components/PopupWithConfirmation.js';
+import PopupConfirm from '../components/PopupWithConfirmation.js';
 import UserInfo from '../components/UserInfo.js';
 import Api from '../components/Api.js';
 
@@ -71,13 +71,12 @@ const renderCards = (data) => {
             }
         },
         (evt) => {
-            PopupConfirDeleteCard.open();
-            PopupConfirDeleteCard.submitHandler(async () => {
+            PopupConfirmDeleteCard.open();
+            PopupConfirmDeleteCard.submitHandler(async () => {
                 try {
                     await api.deleteCard(card._id);
-                    evt.target.closest('.element').remove();
-                    data =  null;
-                    PopupConfirDeleteCard.close();
+                    evt.target.parentElement.remove();
+                    PopupConfirmDeleteCard.close();
                 } catch (evt) {
                     console.warn(evt);
                 }
@@ -170,5 +169,5 @@ async function submitEditAvatar(data) {
 const popupEditAvatarValidation = new FormValidator(validationConfig, avatarForm);
 popupEditAvatarValidation.enableValidation();
 
-const PopupConfirDeleteCard = new PopupConfir(popupDeleteCard);
-PopupConfirDeleteCard.setEventListeners();
+const PopupConfirmDeleteCard = new PopupConfirm(popupDeleteCard);
+PopupConfirmDeleteCard.setEventListeners();
