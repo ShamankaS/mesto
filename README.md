@@ -18,9 +18,6 @@ It consists of cards with photos and a personal user profile.
 
 Frontend (HTML, CSS, JavaScript)
 
-#### TODO
-1. Add backend.
-
 ## v6.0.0
 ### What's new:
 
